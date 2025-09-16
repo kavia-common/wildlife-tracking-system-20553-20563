@@ -1,0 +1,76 @@
+:root{
+  --primary:#2563EB;
+  --secondary:#F59E0B;
+  --error:#EF4444;
+  --bg:#f9fafb;
+  --surface:#ffffff;
+  --text:#111827;
+  --shadow:0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -4px rgba(0,0,0,0.1);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app-header{
+  position: sticky; top:0; z-index:10;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:12px 20px;
+  background: linear-gradient(90deg, rgba(37,99,235,0.1), #f9fafb);
+  border-bottom:1px solid #e5e7eb;
+  backdrop-filter: blur(6px);
+}
+
+.logo{ font-weight:700; color: var(--primary); }
+
+.nav .nav-link{
+  margin-left: 16px; color: var(--text); text-decoration:none;
+  padding:6px 10px; border-radius:8px; transition: all .2s ease;
+}
+.nav .nav-link:hover{ background: #eef2ff; color: var(--primary); }
+
+.layout{
+  display:grid; grid-template-columns: 280px 1fr;
+  gap: 20px; padding: 20px; align-items:start;
+}
+
+.sidebar{
+  background: var(--surface); border:1px solid #e5e7eb; border-radius: 12px;
+  padding:16px; box-shadow: var(--shadow);
+}
+.sidebar .label{ display:block; margin:12px 0 6px; font-size: 12px; text-transform: uppercase; color:#6b7280;}
+.sidebar input{
+  width:100%; padding:10px 12px; border:1px solid #d1d5db; border-radius: 10px; outline:none;
+}
+.btn{
+  margin-top:12px; width:100%; background: var(--primary); color:white;
+  border:none; padding:10px 12px; border-radius: 10px; cursor:pointer; transition: transform .05s ease;
+}
+.btn:active{ transform: translateY(1px); }
+
+.content{
+  display:grid; grid-template-columns: 1fr 1fr; gap:20px;
+}
+
+.panel{
+  background: var(--surface); border:1px solid #e5e7eb; border-radius: 12px; padding:16px; box-shadow: var(--shadow);
+}
+
+.animal-list{ list-style:none; padding:0; margin:0; display:grid; gap:10px; }
+.animal-item{
+  display:flex; align-items:center; justify-content:space-between;
+  border:1px solid #e5e7eb; border-radius:10px; padding:12px;
+}
+.animal-item .meta{ font-size: 12px; color:#6b7280; }
+
+.details{ min-height: 120px; }
+
+.status{ margin-top:10px; font-size:12px; color:#6b7280; }
+
+.footer{
+  padding:16px 20px; border-top:1px solid #e5e7eb; margin-top:20px; color:#6b7280;
+}

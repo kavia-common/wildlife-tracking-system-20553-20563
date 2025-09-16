@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wildlife Tracker</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header class="app-header">
+    <div class="logo">Wildlife Tracker</div>
+    <nav class="nav">
+      <a href="#" class="nav-link">Dashboard</a>
+      <a href="#" class="nav-link">Animals</a>
+      <a href="#" class="nav-link">About</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <h3>Filters</h3>
+      <label class="label">Search</label>
+      <input id="searchInput" type="text" placeholder="Name or species..." />
+      <label class="label">Species</label>
+      <input id="speciesInput" type="text" placeholder="e.g., Sloth Bear" />
+      <button id="applyBtn" class="btn">Apply</button>
+      <div id="status" class="status"></div>
+    </aside>
+
+    <main class="content">
+      <section class="panel">
+        <h2>Animals</h2>
+        <ul id="animalList" class="animal-list"></ul>
+      </section>
+      <section class="panel">
+        <h2>Details</h2>
+        <div id="details" class="details">Select an animal to view details.</div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <span>© 2025 Wildlife Tracking</span>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
